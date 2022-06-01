@@ -6,7 +6,7 @@ import { Statistics } from '../fetched'
 const Home = () => {
 
   return (
-    <div classsName='w-full bg-black'>
+    <div className='w-full'>
       <div className='w-full block md:flex justify-between px-5 lg:px-10 pt-12'>
         <div className='w-full'>
           <span className='text-gray-500'> Sales Today </span>

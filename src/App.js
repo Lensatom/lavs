@@ -26,10 +26,10 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className='w-full lg:flex lg:justify-between mt-0'>
-        {sideBar == true ? <Sidebar toggleNav={toggleNav}/> : ""}
-        <div className='w-full'>
-          <Nav className='fixed' deviceWidth={deviceWidth} toggleNav={toggleNav}/>
+      <div className='w-full  mt-0'>
+        <Nav className='fixed w-full' deviceWidth={deviceWidth} toggleNav={toggleNav}/>
+        <div className='w-full lg:flex lg:justify-between'>
+          {sideBar == true ? <Sidebar toggleNav={toggleNav} deviceWidth={deviceWidth}/> : ""}
           <Routes style={deviceWidth <= 820 && sideBar == true ? {filter: 'blur(50px)'} : ""}>
             <Route path='/' element={<Home />} />
             <Route path='/home' element='Hello' />
