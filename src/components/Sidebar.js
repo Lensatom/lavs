@@ -3,28 +3,28 @@ import { Link, NavLink } from 'react-router-dom'
 
 import { Homes, Commercials, Plans, Analyses } from '../sources'
 
-const Sidebar = () => {
+const Sidebar = props => {
 
-  const activeLink = "bg-blue-700 px-1 text-gray-50 block my-3 capitalize";
-  const normalLink = "bg-transparent px-1 text-gray-400 block my-3 capitalize";
+  const activeLink = "bg-blue-700 px-2 py-1 text-gray-50 block my-3 capitalize w-full md:w-1/2 lg:w-full";
+  const normalLink = "bg-transparent rounded-5 px-2 py-1 text-gray-400 block my-3 capitalize hover:bg-gray-100 hover:rounded-sm w-full md:w-1/2 lg:w-full";
 
   return (
-    <div className='pr-20 pl-5 bg-gray-50 h-screen overflowY-scroll'>
-      <p className='mb-3 mt-5 px-1'> Home </p>
+    <div className='pr-20 pl-5 bg-gray-50 h-screen'>
+      <p className='mb-3 mt-5 px-2'> Home </p>
       {Homes.map(home =>
-        <NavLink to={home.to} className={({isActive}) => isActive ? activeLink : normalLink}> {home.name} </NavLink>
+        <NavLink to={home.to} onClick={() => props.toggleNav()} className={({isActive}) => isActive ? activeLink : normalLink}> {home.name} </NavLink>
       )}
-      <p className='mb-3 mt-5 px-1'> Commercials </p>
+      <p className='mb-3 mt-5 px-2'> Commercials </p>
       {Commercials.map(commercial =>
-        <NavLink to={commercial.to} className={({isActive}) => isActive ? activeLink : normalLink}> {commercial.name} </NavLink>
+        <NavLink to={commercial.to} onClick={() => props.toggleNav()} className={({isActive}) => isActive ? activeLink : normalLink}> {commercial.name} </NavLink>
       )}
-      <p className='mb-3 mt-5 px-1'> Plans </p>
+      <p className='mb-3 mt-5 px-2'> Plans </p>
       {Plans.map(plan =>
-        <NavLink to={plan.to} className={({isActive}) => isActive ? activeLink : normalLink}> {plan.name} </NavLink>
+        <NavLink to={plan.to} onClick={() => props.toggleNav()} className={({isActive}) => isActive ? activeLink : normalLink}> {plan.name} </NavLink>
       )}
-      <p className='mb-3 mt-5 px-1'> Analyses </p>
+      <p className='mb-3 mt-5 px-2'> Analyses </p>
       {Analyses.map(analysis =>
-        <NavLink to={analysis.to} className={({isActive}) => isActive ? activeLink : normalLink}> {analysis.name} </NavLink>
+        <NavLink to={analysis.to} onClick={() => props.toggleNav()} className={({isActive}) => isActive ? activeLink : normalLink}> {analysis.name} </NavLink>
       )}
     </div>
   )
