@@ -24,7 +24,7 @@ const Home = () => {
         {Statistics.map(statistic => 
           <div className='md:hover:bg-gray-50 border-b-2 md:border-b-0 boder-gray-400 border-solid px-5 h-28 md:px-0 my-5 w-full md:w-44 md:text-center flex justify-between md:flex-col' style={{alignItems: 'center'}}>
             {statistic.icon}
-            <div className='flex-col justify-between h-16'>
+            <div className='flex-col justify-between h-16 text-right'>
               <span className='text-gray-500'> {statistic.account} </span>
               <h2 className='text-xl'> {statistic.statistics} </h2>
             </div>
