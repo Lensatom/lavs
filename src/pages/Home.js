@@ -14,7 +14,7 @@ const Home = () => {
           <span className='text-gray-500'> Expenses Today </span>
           <h2 className='text-xl mt-1'> 20,000 Naira </h2>
         </div>
-        <div className='my-10 md:my-0 w-auto bg-gray-200 md:bg-transparent py-5 md:py-0'>
+        <div className='my-10 md:my-0 w-auto py-5 md:py-0'>
           <SparklineComponent width='300' height='100' dataSource={[1, 4, 5, 11, 60, 7, 90, 20, 4, 60, 10, 4, 3, 48, 6, 8, 90, 4, 6, 12, 3, 4, 78, 3, 21]}>
             <Inject services={[SparklineTooltip]} />
           </SparklineComponent>
