@@ -42,8 +42,8 @@ export const Plans = [
     to: '/todos'
   },
   {
-    name: 'Round table',
-    to: 'rtable'
+    name: 'Discussion',
+    to: '/discussion'
   }
 ]
 

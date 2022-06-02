@@ -9,8 +9,11 @@ const App = () => {
   const [deviceWidth, setDeviceWidth] = useState()
   const [sideBar, setSideBar] = useState()
 
-  const toggleNav = () => {
+  const toggleNav = state => {
     setSideBar(!sideBar)
+    if (state == true) {
+      setSideBar(false)
+    }
   }
 
   useEffect(() => {
@@ -24,17 +27,21 @@ const App = () => {
     handleResize()
   }, [])
 
+  let blur = {filter: 'blur(5px)'}
+
   return (
     <BrowserRouter>
-      <div className='w-full  mt-0'>
-        <Nav className='fixed w-full' deviceWidth={deviceWidth} toggleNav={toggleNav}/>
-        <div className='w-full lg:flex lg:justify-between'>
-          {sideBar == true ? <Sidebar toggleNav={toggleNav} deviceWidth={deviceWidth}/> : ""}
-          <Routes style={deviceWidth <= 820 && sideBar == true ? {filter: 'blur(50px)'} : ""}>
-            <Route path='/' element={<Home />} />
-            <Route path='/home' element='Hello' />
-          </Routes>
+      <div className='w-full mt-0 flex justify-between h-screen'>
+        <div className={deviceWidth <= 820 && sideBar == true ? 'w-full lg:flex-col lg:justify-between blur-sm' : 'w-full lg:flex-col lg:justify-between'}>
+          <Nav className='fixed w-full' deviceWidth={deviceWidth} toggleNav={toggleNav}/>
+          <div onClick={deviceWidth <= 820 ? () => toggleNav(true) : {}}>
+            <Routes> 
+              <Route path='/' element={<Home />}/>
+              <Route path='/home' element='Hello' />
+            </Routes>
+          </div>
         </div>
+        {sideBar == true ? <Sidebar toggleNav={toggleNav} deviceWidth={deviceWidth}/> : ""}
       </div>
     </BrowserRouter>
   )
