@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { AiFillCloseCircle } from 'react-icons/ai'
 
 import { Homes, Commercials, Plans, Analyses } from '../sources'
 
@@ -9,10 +10,13 @@ const Sidebar = props => {
   const normalLink = "bg-transparent rounded-5 px-2 py-1 text-gray-400 block my-3 capitalize hover:bg-gray-100 hover:rounded-sm w-full md:w-1/2 lg:w-full";
 
   return (
-    <div className='lg-static fixed bg-gray-50 h-screen w-3/4 md:w-1/2 lg:w-auto' style={{overflowY: 'scroll'}}>
-      <div className='flex-col pl-5 py-3'>
-        <h2 className='text-2xl static  text-blue-700'> Lavs Admin </h2>
-        <p className='text-sm text-gray-400'> James Michael </p>
+    <div className='lg:static fixed bg-gray-50 h-screen w-3/4 md:w-1/2 lg:w-2/12' style={{overflowY: 'scroll'}}>
+      <div className='flex py-3 justify-evenly' style={{alignItems: 'center'}}>
+        <div className='flex-col w-3/4'>
+          <h2 className='text-2xl static  text-blue-700'> Lavs Admin </h2>
+          <p className='text-sm text-gray-400 cursor-pointer hover:text-black'> James Michael </p>
+        </div>
+        <AiFillCloseCircle className='text-lg cursor-pointer text-gray-400 hover:text-black' onClick={() => props.toggleNav()} />
       </div>
       <div className='pr-20 pl-5 w-full'>
         <p className='mb-3 mt-5 px-2'> Home </p>

@@ -2,6 +2,10 @@ export const Homes = [
   {
     name: 'home',
     to: '/'
+  },
+  {
+    name: 'About',
+    to: '/about'
   }
 ]
 

@@ -1,10 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Nav = props => {
   return (
     <div className="w-full bg-blue-700 text-white h-10 h-12 px-5 lg:px-10 pt-3 top-0 flex align-bottom justify-between">
-      <span className='cursor-pointer' onClick={() => props.toggleNav()}> Menu </span>
+      <GiHamburgerMenu className='cursor-pointer text-xl' onClick={() => props.toggleNav()} />
       <div className='flex justify-end md:justify-between w-1/2 md:w-1/2 lg:w-1/4'>
         {props.deviceWidth > 765 ?
         <>

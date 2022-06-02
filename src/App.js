@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import { Nav, Sidebar } from './components';
-import { Home } from './pages';
+import { About, Home } from './pages';
 
 const App = () => {
 
@@ -27,17 +27,15 @@ const App = () => {
     handleResize()
   }, [])
 
-  let blur = {filter: 'blur(5px)'}
-
   return (
     <BrowserRouter>
-      <div className='w-full mt-0 flex justify-between h-screen'>
+      <div className='w-full mt-0 flex lg:flex-row-reverse justify-between h-screen'>
         <div className={deviceWidth <= 820 && sideBar == true ? 'w-full lg:flex-col lg:justify-between blur-sm' : 'w-full lg:flex-col lg:justify-between'}>
           <Nav className='fixed w-full' deviceWidth={deviceWidth} toggleNav={toggleNav}/>
-          <div onClick={deviceWidth <= 820 ? () => toggleNav(true) : {}}>
+          <div className='h-screen' onClick={deviceWidth <= 820 ? () => toggleNav(true) : {}}>
             <Routes> 
               <Route path='/' element={<Home />}/>
-              <Route path='/home' element='Hello' />
+              <Route path='/about' element={<About />} />
             </Routes>
           </div>
         </div>

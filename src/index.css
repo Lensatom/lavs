@@ -1,6 +1,28 @@
 body{
   margin: 0;
-  padding: 0;
+  padding: 0
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 100px;
+  height: 100px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: lightgrey;
+  border-radius: 100px;
+  height: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: grey;
+  border-radius: 100px;
+  height: 100px;
 }
 
 @tailwind base;
