@@ -30,9 +30,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className='w-full mt-0 flex lg:flex-row-reverse justify-between h-screen'>
-        <div className={deviceWidth <= 820 && sideBar == true ? 'w-full lg:flex-col lg:justify-between blur-sm' : 'w-full lg:flex-col lg:justify-between'}>
-          <Nav className='fixed w-full' deviceWidth={deviceWidth} toggleNav={toggleNav}/>
-          <div className='h-screen' onClick={deviceWidth <= 820 ? () => toggleNav(true) : {}}>
+        <div className={deviceWidth <= 820 && sideBar == true ? 'w-full lg:flex-col h-screen lg:justify-between blur-sm' : 'w-full h-screen lg:flex-col lg:justify-between'}>
+          <Nav className='fixed w-full' style={{height: '10%'}} deviceWidth={deviceWidth} sideBar={sideBar} toggleNav={toggleNav}/>
+          <div className='overflow-y-scroll' style={{height: '92%'}} onClick={deviceWidth <= 820 ? () => toggleNav(true) : {}}>
             <Routes> 
               <Route path='/' element={<Home />}/>
               <Route path='/about' element={<About />} />

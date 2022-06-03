@@ -1,53 +1,69 @@
+import {AiOutlineHome, AiFillHome, AiOutlineBook, AiFillBook, AiOutlineCalendar, AiFillCalendar, AiOutlineCheckCircle, AiFillCheckCircle} from 'react-icons/ai'
+import {BsCartCheck, BsCartCheckFill, BsPeople, BsPeopleFill, BsChatDots, BsChatDotsFill} from 'react-icons/bs'
+import {RiStockLine, RiStockFill} from 'react-icons/ri'
+import {HiOutlineSpeakerphone, HiSpeakerphone, HiOutlinePresentationChartLine, HiPresentationChartLine} from 'react-icons/hi'
+
 export const Homes = [
   {
     name: 'home',
-    to: '/'
+    to: '/',
+    icons: [<AiOutlineHome />, <AiFillHome />]
   },
   {
     name: 'About',
-    to: '/about'
+    to: '/about',
+    icons: [<AiOutlineBook />, <AiFillBook />]
   }
 ]
 
 export const  Commercials = [
   {
     name: 'orders',
-    to: '/orders'
+    to: '/orders',
+    icons: [<BsCartCheck />, <BsCartCheckFill />]
   },
   {
     name: 'customers',
-    to: '/customers'
+    to: '/customers',
+    icons: [<BsPeople />, <BsPeopleFill />]
   },
   {
     name: 'chat',
-    to: '/chat'
+    to: '/chat',
+    icons: [<BsChatDots />, <BsChatDotsFill />]
   },
   {
     name: 'stock',
-    to: '/stock'
+    to: '/stock',
+    icons: [<RiStockLine />, <RiStockFill />]
   },
   {
     name: 'employees',
-    to: '/employees'
+    to: '/employees',
+    icons: [<BsPeople />, <BsPeopleFill />]
   },
   {
     name: 'Awareness',
-    to: '/awareness'
+    to: '/awareness',
+    icons: [<HiOutlineSpeakerphone />, <HiSpeakerphone />]
   }
 ]
 
 export const Plans = [
   {
     name: 'Calendar',
-    to: '/calendar'
+    to: '/calendar',
+    icons: [<AiOutlineCalendar />, <AiFillCalendar />]
   },
   {
     name: 'todos',
-    to: '/todos'
+    to: '/todos',
+    icons: [<AiOutlineCheckCircle />, <AiFillCheckCircle />]
   },
   {
     name: 'Discussion',
-    to: '/discussion'
+    to: '/discussion',
+    icons: [<HiOutlinePresentationChartLine />, <HiPresentationChartLine />]
   }
 ]
 
