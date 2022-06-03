@@ -31,9 +31,9 @@ const Home = () => {
           </div>
         )}
       </div>
-      <div className='flex-col flex md:flex-row h-auto mt-20 w-full md:justify-evenly lg:justify-around md:px-20 lg:px-0 lg:w-1/2 items-start md:items-center md:mx-auto lg:mx-0'>
+      <div className='flex-col flex md:flex-row h-auto mt-20 w-full md:justify-evenly lg:justify-around md:px-20 lg:px-0 lg:w-1/2 text-center md:text-left items-center md:mx-auto lg:mx-0'>
         <div className='w-64 h-64 rounded-full bg-gray-300 mx-auto md:mx-0'></div>
-        <div className='flex-col ml-10 mt-10 md:mt-0'>
+        <div className='flex-col ml mt-10 md:mt-0'>
           <span className='text-gray-500'> Cummulative Capital </span>
           <h2 className='text-xl mb-4 mt-1'> 500,000 Naira </h2>
           <span className='text-gray-500'> Cummulative Profit </span>
