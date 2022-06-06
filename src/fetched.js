@@ -30,3 +30,26 @@ export const Statistics = [
     statistics: 2000
   }
 ]
+
+export const Details = [
+  {
+    field: 'Surname',
+    value: 'James'
+  },
+  {
+    field: 'Other Names',
+    value: 'Alfred Michael'
+  },
+  {
+    field: 'Email',
+    value: 'mikealjames@gmail.com'
+  },
+  {
+    field: 'Department',
+    value: 'Sales'
+  },
+  {
+    field: 'Position',
+    value: 'Sales Manager'
+  }
+]

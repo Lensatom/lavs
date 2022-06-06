@@ -81,3 +81,26 @@ export const Analyses = [
     to: 'cranking'
   }
 ]
+
+export const Themes = [
+  {
+    name: 'Aqua',
+    color: ['bg-blue-700', 'text-blue-700']
+  },
+  {
+    name: 'Wood',
+    color: ['bg-orange-700', 'text-orange-700']
+  },
+  {
+    name: 'Forest',
+    color: ['bg-green-700', 'text-green-700']
+  },
+  {
+    name: 'Sunlight',
+    color: ['bg-yellow-700', 'text-yellow-700']
+  },
+  {
+    name: 'Royal',
+    color: ['bg-purple-700', 'text-purple-700']
+  },
+]
