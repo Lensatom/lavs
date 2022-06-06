@@ -28,6 +28,10 @@ const App = () => {
 
     handleResize()
 
+    if (localStorage.getItem('mode') == null) {
+      localStorage.setItem('mode', 'light')
+    }
+
     setMode(localStorage.getItem('mode'))
 
   }, [mode])
