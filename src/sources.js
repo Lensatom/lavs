@@ -84,23 +84,28 @@ export const Analyses = [
 
 export const Themes = [
   {
-    name: 'Aqua',
-    color: ['bg-blue-700', 'text-blue-700']
+    name: 'aqua',
+    color: ['bg-blue-700', 'text-blue-700'],
+    index: 0
   },
   {
-    name: 'Wood',
-    color: ['bg-orange-700', 'text-orange-700']
+    name: 'wood',
+    color: ['bg-orange-700', 'text-orange-700'],
+    index: 1
   },
   {
-    name: 'Forest',
-    color: ['bg-green-700', 'text-green-700']
+    name: 'forest',
+    color: ['bg-green-700', 'text-green-700'],
+    index: 2
   },
   {
-    name: 'Sunlight',
-    color: ['bg-yellow-700', 'text-yellow-700']
+    name: 'sunlight',
+    color: ['bg-yellow-700', 'text-yellow-700'],
+    index: 3
   },
   {
-    name: 'Royal',
-    color: ['bg-purple-700', 'text-purple-700']
+    name: 'royal',
+    color: ['bg-purple-700', 'text-purple-700'],
+    index: 4
   },
 ]

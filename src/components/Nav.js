@@ -8,7 +8,7 @@ const Nav = props => {
   const normalLink = "text-gray-200";
 
   return (
-    <div className="w-full bg-blue-700 text-white px-5 py-3 lg:px-10 top-0 flex justify-between" style={{alignItems: 'center'}}>
+    <div className={`w-full ${props.theme[0]} text-white px-5 py-3 lg:px-10 top-0 flex justify-between`} style={{alignItems: 'center'}}>
       {!props.sideBar ? <GiHamburgerMenu className='cursor-pointer text-xl' onClick={() => props.toggleNav()} /> : <div className='cursor-pointer text-xl' onClick={() => props.toggleNav()}> </div>}
       <div className='flex justify-end md:justify-between w-1/2 md:w-1/2 lg:w-1/4 '>
         {props.deviceWidth > 765 ?

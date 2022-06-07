@@ -2,8 +2,9 @@ import React from 'react'
 import {SparklineComponent, Inject, SparklineTooltip, StockChartIndicatorDirective} from '@syncfusion/ej2-react-charts'
 import { Details } from '../fetched'
 import { Themes } from '../sources'
+import { Button } from '../components'
 
-const Profile = () => {
+const Profile = props => {
   return (
     <div className='px-5 pt-12'>
       <div className=' flex md:flex-row flex-col md:justify-between'>
@@ -39,15 +40,15 @@ const Profile = () => {
             <span className='mb-5 text-xl'> Themes </span>
             <div className='flex flex-wrap'>
               {Themes.map(theme => 
-                <div className='flex flex-col text-gray-400 items-center mr-10 mt-5 cursor-pointer'>
-                  <div className={`w-12 h-12 rounded-full ${theme.color[0]}`}></div>
+                <div className='flex capitalize flex-col text-gray-400 items-center mr-10 mt-5 cursor-pointer'>
+                  <div className={`w-12 h-12 rounded-full ${theme.color[0]}`} onClick={() => props.changeTheme(theme.index)}></div>
                   <span> {theme.name} </span>
                 </div>
               )}
             </div>
           </div>
-          <div className='flex mt-5 md:mt-20 lg:mt-5 flex-col md:w-ful justify-between'>
-            <button className='md:w-1/2 lg:ml-20 justify-center mt-16 py-3 bg-blue-700 text-gray-200 hover:text-white rounded-xl lg:mt-16'> LogOut </button>
+          <div className='flex mt-5 md:mt-10 lg:mb-10 flex-col md:w-ful justify-between'>
+            <Button content={'Log Out'} theme={props.theme} />
           </div>
         </div>
       </div>

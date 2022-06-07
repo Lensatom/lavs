@@ -8,7 +8,7 @@ import { Homes, Commercials, Plans, Analyses } from '../sources'
 
 const Sidebar = props => {
 
-  const activeLink = "bg-blue-700 px-2 py-1 text-gray-50 block my-3 capitalize w-full md:w-1/2 lg:w-full flex items-center justify-between rounded-md";
+  const activeLink = `${props.theme[0]} px-2 py-1 text-gray-50 block my-3 capitalize w-full md:w-1/2 lg:w-full flex items-center justify-between rounded-md`;
   const normalLink = "bg-transparent rounded-5 px-2 py-1 text-gray-400 block my-3 capitalize hover:bg-gray-100 hover:rounded-sm w-full md:w-1/2 lg:w-full flex items-center justify-between rounded-md";
 
   let light = <BsFillSunFill />
@@ -19,7 +19,7 @@ const Sidebar = props => {
     <div className={`lg:static fixed ${mode[1] == 'dark' ? 'bg-black text-white' : 'bg-gray-50'} h-screen w-3/4 md:w-1/2 lg:w-2/12`} style={{overflowY: 'scroll'}}>
       <div className='flex py-3 justify-evenly' style={{alignItems: 'center'}}>
         <div className='flex-col w-3/4'  onClick={() => props.deviceWidth <= 820 ? props.toggleNav() : {}}>
-          <h2 className='text-2xl static  text-blue-700'> Lavs Admin </h2>
+          <h2 className={`text-2xl static ${props.theme[1]}`}> Lavs Admin </h2>
           <NavLink to='/profile' className='text-sm text-gray-400 cursor-pointer'> James Michael </NavLink>
           <div className='cursor-pointer mt-5'> {mode[0]} </div>
         </div>
