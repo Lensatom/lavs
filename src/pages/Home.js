@@ -1,7 +1,7 @@
 import React from 'react'
 import {SparklineComponent, Inject, SparklineTooltip, StockChartIndicatorDirective} from '@syncfusion/ej2-react-charts'
 
-import { Statistics } from '../fetched'
+import { Statistics, TopProducts } from '../fetched'
 
 const Home = () => {
 
@@ -31,15 +31,32 @@ const Home = () => {
           </div>
         )}
       </div>
-      <div className='flex-col flex md:flex-row h-auto mt-20 w-full md:justify-evenly lg:justify-around md:px-20 lg:px-0 lg:w-1/2 text-center md:text-left items-center md:mx-auto lg:mx-0'>
-        <div className='w-64 h-64 rounded-full bg-gray-300 mx-auto md:mx-0'></div>
-        <div className='flex-col ml mt-10 md:mt-0'>
-          <span className='text-gray-500'> Cummulative Capital </span>
-          <h2 className='text-xl mb-4 mt-1'> 500,000 Naira </h2>
-          <span className='text-gray-500'> Cummulative Profit </span>
-          <h2 className='text-xl mt-1 mb-4'> 20,000 Naira </h2>
-          <span className='text-gray-500'> Cummulative Expenses </span>
-          <h2 className='text-xl mt-1'> 20,000 Naira </h2>
+      <div className='flex flex-col lg:flex-row md:px-20 lg:px-0 mt-20 w-full'>
+        <div className='flex-col flex md:flex-row h-auto w-full md:justify-evenly lg:justify-around lg:w-1/2 text-center md:text-left items-center md:mx-auto lg:mx-0'>
+          <div className='w-64 h-64 rounded-full bg-gray-300 mx-auto md:mx-0'></div>
+          <div className='flex flex-col items-center'>
+            <div className='flex-col mt-5'>
+              <span className='pt-2 text-gray-500'> Cummulative Capital </span>
+              <h2 className='text-xl pb-2 border-b-1 border-solid border-gray-400'> 500,000 Naira </h2>
+              <span className='pt-2 text-gray-500'> Cummulative Profit </span>
+              <h2 className='text-xl pb-2 border-b-1 border-solid border-gray-400'> 20,000 Naira </h2>
+              <span className='pt-2 text-gray-500'> Cummulative Expenses </span>
+              <h2 className='text-xl pb-2 border-b-1 border-solid border-gray-400'> 20,000 Naira </h2>
+            </div>
+          </div>
+        </div>
+        <div className='w-full lg:w-1/2 flex justify-center mt-16 lg:mt-0'>
+          <div className='w-full lg:w-1/2 flex flex-col items-center justify-between'>
+            <span className='text-2xl'> Top Products </span>
+            <div className='w-full mt-5 lg:mt-0'>
+              {TopProducts.map(topproduct =>
+                <div className='w-full flex justify-between py-2 border-b-1 border-gray-400 border-solid'>
+                  <span> {topproduct.product} </span>
+                  <span> {topproduct.bought} </span> 
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

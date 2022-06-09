@@ -53,3 +53,26 @@ export const Details = [
     value: 'Sales Manager'
   }
 ]
+
+export const TopProducts = [
+  {
+    product: 'Samsung A16 plus',
+    bought: 20000
+  },
+  {
+    product: 'Mouka XL foam',
+    bought: 19580
+  },
+  {
+    product: 'Iphone 13 pro',
+    bought: 17900
+  },
+  {
+    product: 'Nike air 11',
+    bought: 15680
+  },
+  {
+    product: 'MacBook 11',
+    bought: 14900
+  }
+]

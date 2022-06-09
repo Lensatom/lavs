@@ -17,14 +17,15 @@ const Sidebar = props => {
 
   return (
     <div className={`lg:static fixed ${mode[1] == 'dark' ? 'bg-black text-white' : 'bg-gray-50'} h-screen w-3/4 md:w-1/2 lg:w-2/12`} style={{overflowY: 'scroll'}}>
-      <div className='flex py-3 justify-evenly' style={{alignItems: 'center'}}>
-        <div className='flex-col w-3/4'  onClick={() => props.deviceWidth <= 820 ? props.toggleNav() : {}}>
+      <AiFillCloseCircle className='text-2xl cursor-pointer m-3 text-gray-400 float-right' onClick={() => props.toggleNav()} />
+      <div className='w-full flex pt-1 p-3 justify-between items-end'>
+        <div className='flex flex-col w-3/4 justify-between'  onClick={() => props.deviceWidth <= 820 ? props.toggleNav() : {}}>
           <h2 className={`text-2xl static ${props.theme[1]}`}> Lavs Admin </h2>
-          <NavLink to='/profile' className='text-sm text-gray-400 cursor-pointer'> James Michael </NavLink>
-          <div className='cursor-pointer mt-5'> {mode[0]} </div>
+          <NavLink to='/profile' className='text-sm text-gray-400 cursor-pointer'> James Michael </NavLink> 
         </div>
-        <AiFillCloseCircle className='text-lg cursor-pointer text-gray-400' onClick={() => props.toggleNav()} />
+        <div className='cursor-pointer'> {mode[0]} </div>
       </div>
+      
       <div className='w-full px-2'>
         <p className='mb-3 mt-5 px-2'> Home </p>
         {Homes.map(home =>

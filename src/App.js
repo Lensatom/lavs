@@ -47,6 +47,7 @@ const App = () => {
     let localMode = localStorage.getItem('mode')
     localMode == 'dark' ? localStorage.setItem('mode', 'light') : localStorage.setItem('mode', 'dark')
     setMode(null)
+    console.log('Hello')
   }
 
   const changeTheme = mode => {
@@ -59,7 +60,7 @@ const App = () => {
       <div className={`w-full mt-0 flex lg:flex-row-reverse justify-between h-screen ${mode == 'dark' ? 'bg-gray-900 text-white' : ''}`}>
         <div className={deviceWidth <= 820 && sideBar == true ? 'w-full lg:flex-col h-screen lg:justify-between blur-sm' : 'w-full h-screen lg:flex-col lg:justify-between'}>
           <Nav className='fixed w-full' style={{height: '10%'}} theme={theme} deviceWidth={deviceWidth} sideBar={sideBar} toggleNav={toggleNav}/>
-          <div className='overflow-y-scroll'  style={{height: '92%'}} onClick={deviceWidth <= 820 ? () => toggleNav(true) : {}}>
+          <div className='overflow-y-scroll'  style={{height: '92%'}}>
             <Routes> 
               <Route path='/' element={<Home mode={mode}/>}/>
               <Route path='/about' element={<About />} />
