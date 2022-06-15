@@ -76,3 +76,86 @@ export const TopProducts = [
     bought: 14900
   }
 ]
+
+export const OrdersData = [
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  },
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  },
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  },
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  },
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  },
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  },
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  },
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  },
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  },
+  {
+    Product: 'Apple Wrist Watch 12',
+    Customer: 'James Klinton',
+    Price: '500,000',
+    Quantity: '1',
+    Discount: '0%',
+    Charged: '500,000'
+  }
+]

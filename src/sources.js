@@ -109,3 +109,51 @@ export const Themes = [
     index: 4
   },
 ]
+
+export const OrdersHeaders = [
+    {
+      field: 'Product',
+      headerText: 'Product',
+      width: 150,
+      editType: 'dropdownedit',
+      textAlign: 'left'
+    },
+    {
+      field: 'Customer',
+      headerText: 'Customer',
+      width: 150,
+      editType: 'dropdownedit',
+      textAlign: 'left'
+    },
+    {
+      field: 'Price',
+      headerText: 'Price',
+      width: 150,
+      editType: 'dropdownedit',
+      textAlign: 'left',
+      format: 'c2'
+    },
+    {
+      field: 'Quantity',
+      headerText: 'Quantity',
+      width: 150,
+      editType: 'dropdownedit',
+      textAlign: 'center'
+    },
+    {
+      field: 'Discount',
+      headerText: 'Discount',
+      width: 150,
+      editType: 'dropdownedit',
+      textAlign: 'center'
+    },
+    {
+      field: 'Charged',
+      headerText: 'Charged',
+      width: 150,
+      editType: 'dropdownedit',
+      textAlign: 'left',
+      format: 'c2'
+    },
+    
+  ]

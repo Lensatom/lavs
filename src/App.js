@@ -3,6 +3,10 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import { Nav, Sidebar } from './components';
 import { About, Home, Profile } from './pages';
+import Customers from './pages/Customers';
+import Employees from './pages/Employees';
+import Orders from './pages/Orders';
+import Stock from './pages/Stock';
 import { Themes } from './sources';
 
 const App = () => {
@@ -64,6 +68,10 @@ const App = () => {
             <Routes> 
               <Route path='/' element={<Home mode={mode}/>}/>
               <Route path='/about' element={<About />} />
+              <Route path='/orders' element={<Orders />} />
+              <Route path='/employeesgk' element={<Employees />} />
+              <Route path='/stock' element={<Stock />} />
+              <Route path='/customers' element={<Customers />} />
               <Route path='/profile' element={<Profile changeTheme={changeTheme} theme={theme} />} />
             </Routes>
           </div>

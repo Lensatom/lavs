@@ -1,9 +1,17 @@
 import React from 'react'
-import {SparklineComponent, Inject, SparklineTooltip, StockChartIndicatorDirective} from '@syncfusion/ej2-react-charts'
+import {SparklineComponent, Inject, SparklineTooltip, AccumulationChartComponent, AccumulationTooltip, AccumulationLegend, StockChartIndicatorDirective, PieSeries, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective} from '@syncfusion/ej2-react-charts'
 
 import { Statistics, TopProducts } from '../fetched'
 
+import '../custom.css'
+
 const Home = () => {
+
+  const pieData = [
+    {name: 'Capital', value: 300000, text: '37%'},
+    {name: 'Profit', value: 120000, text: '63%'},
+    {name: 'Expenses', value: 20000, text: '37%'},
+  ]
 
   return (
     <div className='w-full px-5 lg:px-10'>
@@ -33,22 +41,27 @@ const Home = () => {
       </div>
       <div className='flex flex-col lg:flex-row md:px-20 lg:px-0 mt-20 w-full'>
         <div className='flex-col flex md:flex-row h-auto w-full md:justify-evenly lg:justify-around lg:w-1/2 text-center md:text-left items-center md:mx-auto lg:mx-0'>
-          <div className='w-64 h-64 rounded-full bg-gray-300 mx-auto md:mx-0'></div>
+          <AccumulationChartComponent width='300' height='300' background='transparent' tooltip={{enable:true}}>
+            <Inject services={[PieSeries, AccumulationTooltip]} ></Inject>
+            <AccumulationSeriesCollectionDirective>
+              <AccumulationSeriesDirective type='pie' dataSource={pieData} innerRadius="40%" xName="name" yName="value" dataLabel={{name:'text', position:'Inside'}}></AccumulationSeriesDirective>
+            </AccumulationSeriesCollectionDirective>
+          </AccumulationChartComponent>
           <div className='flex flex-col items-center'>
             <div className='flex-col mt-5'>
               <span className='pt-2 text-gray-500'> Cummulative Capital </span>
-              <h2 className='text-xl pb-2 border-b-1 border-solid border-gray-400'> 500,000 Naira </h2>
+              <h2 className='text-xl pb-2 border-b-1 border-solid border-gray-400'> 300,000 Naira </h2>
               <span className='pt-2 text-gray-500'> Cummulative Profit </span>
-              <h2 className='text-xl pb-2 border-b-1 border-solid border-gray-400'> 20,000 Naira </h2>
+              <h2 className='text-xl pb-2 border-b-1 border-solid border-gray-400'> 120,000 Naira </h2>
               <span className='pt-2 text-gray-500'> Cummulative Expenses </span>
               <h2 className='text-xl pb-2 border-b-1 border-solid border-gray-400'> 20,000 Naira </h2>
             </div>
           </div>
         </div>
         <div className='w-full lg:w-1/2 flex justify-center mt-16 lg:mt-0'>
-          <div className='w-full lg:w-1/2 flex flex-col items-center justify-between'>
+          <div className='w-full lg:w-1/2 flex flex-col items-center'>
             <span className='text-2xl'> Top Products </span>
-            <div className='w-full mt-5 lg:mt-0'>
+            <div className='w-full mt-5'>
               {TopProducts.map(topproduct =>
                 <div className='w-full flex justify-between py-2 border-b-1 border-gray-400 border-solid'>
                   <span> {topproduct.product} </span>
