@@ -4,8 +4,6 @@ import {BiPhoneCall} from 'react-icons/bi'
 import {FiSend} from 'react-icons/fi'
 import {RiAttachment2} from 'react-icons/ri'
 
-import { ChatCustomers } from '../fetched'
-
 const ChatEnvironment = props => {
   return (
     <div className='w-full flex flex-col justify-between'>
