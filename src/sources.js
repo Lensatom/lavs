@@ -111,49 +111,207 @@ export const Themes = [
 ]
 
 export const OrdersHeaders = [
-    {
-      field: 'Product',
-      headerText: 'Product',
-      width: 150,
-      editType: 'dropdownedit',
-      textAlign: 'left'
-    },
-    {
-      field: 'Customer',
-      headerText: 'Customer',
-      width: 150,
-      editType: 'dropdownedit',
-      textAlign: 'left'
-    },
-    {
-      field: 'Price',
-      headerText: 'Price',
-      width: 150,
-      editType: 'dropdownedit',
-      textAlign: 'left',
-      format: 'c2'
-    },
-    {
-      field: 'Quantity',
-      headerText: 'Quantity',
-      width: 150,
-      editType: 'dropdownedit',
-      textAlign: 'center'
-    },
-    {
-      field: 'Discount',
-      headerText: 'Discount',
-      width: 150,
-      editType: 'dropdownedit',
-      textAlign: 'center'
-    },
-    {
-      field: 'Charged',
-      headerText: 'Charged',
-      width: 150,
-      editType: 'dropdownedit',
-      textAlign: 'left',
-      format: 'c2'
-    },
-    
-  ]
+  {
+    field: 'Product',
+    headerText: 'Product',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Customer',
+    headerText: 'Customer',
+    width: 100,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Price',
+    headerText: 'Price',
+    width: 70,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+    format: 'c2'
+  },
+  {
+    field: 'Quantity',
+    headerText: 'Quantity',
+    width: 70,
+    editType: 'dropdownedit',
+    textAlign: 'center'
+  },
+  {
+    field: 'Discount',
+    headerText: 'Discount',
+    width: 70,
+    editType: 'dropdownedit',
+    textAlign: 'center'
+  },
+  {
+    field: 'Charged',
+    headerText: 'Charged',
+    width: 70,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+    format: 'c2'
+  }, 
+  {
+    field: 'DeliveryAddress',
+    headerText: 'Delivery Address',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+    format: 'c2'
+  },
+  {
+    field: 'Status',
+    headerText: 'Status',
+    width: 100,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+    format: 'c2'
+  },
+]
+
+export const CustomersHeaders = [
+  {
+    field: 'Name',
+    headerText: 'Name',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Email',
+    headerText: 'Email',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Gender',
+    headerText: 'Gender',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+  },
+  {
+    field: 'BoughtWorth',
+    headerText: 'Bought Worth',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+    format: 'c2'
+  },
+  {
+    field: 'Status',
+    headerText: 'Status',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+  },
+]
+
+export const EmployeesHeaders = [
+  {
+    field: 'Surname',
+    headerText: 'Surname',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'OtherNames',
+    headerText: 'Other Names',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Email',
+    headerText: 'Email',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Gender',
+    headerText: 'Gender',
+    width: 100,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+  },
+  {
+    field: 'Rating',
+    headerText: 'Rating',
+    width: 50,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+  },
+  {
+    field: 'Status',
+    headerText: 'Status',
+    width: 100,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+  },
+  {
+    field: 'Department',
+    headerText: 'Department',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Position',
+    headerText: 'Position',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+]
+
+export const StockHeaders = [
+  {
+    field: 'Product',
+    headerText: 'Product',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Price',
+    headerText: 'Price',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Sold',
+    headerText: 'Sold',
+    width: 150,
+    editType: 'dropdownedit',
+    textAlign: 'left'
+  },
+  {
+    field: 'Left',
+    headerText: 'Left',
+    width: 100,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+  },
+  {
+    field: 'TotalQuantity',
+    headerText: 'Total Quantity',
+    width: 50,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+  },
+  {
+    field: 'Capital',
+    headerText: 'Capital',
+    width: 100,
+    editType: 'dropdownedit',
+    textAlign: 'left',
+  }
+]

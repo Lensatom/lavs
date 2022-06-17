@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-import { Nav, Sidebar } from './components';
-import { About, Home, Profile } from './pages';
+import { Nav, Sidebar, ChatEnvironment } from './components';
+import { ChatCustomers } from './fetched';
+import { About, Home, Profile, Chat } from './pages';
 import Customers from './pages/Customers';
 import Employees from './pages/Employees';
 import Orders from './pages/Orders';
@@ -69,10 +70,14 @@ const App = () => {
               <Route path='/' element={<Home mode={mode}/>}/>
               <Route path='/about' element={<About />} />
               <Route path='/orders' element={<Orders />} />
-              <Route path='/employeesgk' element={<Employees />} />
+              <Route path='/employees' element={<Employees />} />
               <Route path='/stock' element={<Stock />} />
+              <Route path='/chat' element={<Chat />} />
               <Route path='/customers' element={<Customers />} />
               <Route path='/profile' element={<Profile changeTheme={changeTheme} theme={theme} />} />
+              {ChatCustomers.map(chatcustomer => 
+                <Route path={`/chat/${chatcustomer.Email}`} element={<Chat customer={chatcustomer.Email} deviceWidth={deviceWidth} />} />
+              )}
             </Routes>
           </div>
         </div>

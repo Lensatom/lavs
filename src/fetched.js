@@ -84,7 +84,9 @@ export const OrdersData = [
     Price: '500,000',
     Quantity: '1',
     Discount: '0%',
-    Charged: '500,000'
+    Charged: '500,000',
+    DeliveryAddress: '21, Fadina Coker Road, Oja Oba, Lagos',
+    Status: 'In stock'
   },
   {
     Product: 'Apple Wrist Watch 12',
@@ -92,7 +94,8 @@ export const OrdersData = [
     Price: '500,000',
     Quantity: '1',
     Discount: '0%',
-    Charged: '500,000'
+    Charged: '500,000',
+    Status: 'Conveying'
   },
   {
     Product: 'Apple Wrist Watch 12',
@@ -100,7 +103,8 @@ export const OrdersData = [
     Price: '500,000',
     Quantity: '1',
     Discount: '0%',
-    Charged: '500,000'
+    Charged: '500,000',
+    Status: 'Delivered'
   },
   {
     Product: 'Apple Wrist Watch 12',
@@ -158,4 +162,78 @@ export const OrdersData = [
     Discount: '0%',
     Charged: '500,000'
   }
+]
+
+export const CustomersData = [
+  {
+    Name: 'James Bond',
+    Email: 'jameslybonded@gmail.com',
+    Gender: 'male',
+    BoughtWorth: 5000,
+    Status: 'online'
+  },
+  {
+    Name: 'James Bond',
+    Email: 'jameslybonded@gmail.com',
+    Gender: 'male',
+    BoughtWorth: 5000,
+    Status: 'online'
+  },
+]
+
+export const EmployeesData = [
+  {
+    Surname: 'James',
+    OtherNames: 'Bond Mayorwa',
+    Email: 'jameslybonded@gmail.com',
+    Gender: 'male',
+    Rating: 5,
+    Status: 'online',
+    Department: 'Accounting',
+    Position: 'Asst. Head Accountant',
+  },
+  {
+    Surname: 'James',
+    OtherNames: 'Bond Mayorwa',
+    Email: 'jameslybonded@gmail.com',
+    Gender: 'male',
+    Rating: 5,
+    Status: 'online',
+    Department: 'Accounting',
+    Position: 'Asst. Head Accountant'
+  },
+]
+
+export const StockData = [
+  {
+    Product: 'Iphone 11 pro max',
+    Price: 200000,
+    Sold: 500,
+    Left: 2000,
+    TotalQuantity: 2500,
+    Capital: 1000000
+  },
+]
+
+export const ChatCustomers = [
+  {
+    Email: 'jamesbond@gmail.com',
+    Name: 'James Bond'
+  },
+  {
+    Email: 'adeniyiayomikun59@gmail.com',
+    Name: 'Ayomikun Adeniyi'
+  },
+  {
+    Email: 'olamiwasimly3@gmail.com',
+    Name: 'Olamide Similoluwa'
+  },
+  {
+    Email: 'phebisori22@gmail.com',
+    Name: 'Phoebe Shoriola'
+  },
+  {
+    Email: 'believeorleave@gmail.com',
+    Name: 'Emmanuel Believe'
+  },
 ]

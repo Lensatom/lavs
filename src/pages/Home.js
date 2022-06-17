@@ -3,8 +3,6 @@ import {SparklineComponent, Inject, SparklineTooltip, AccumulationChartComponent
 
 import { Statistics, TopProducts } from '../fetched'
 
-import '../custom.css'
-
 const Home = () => {
 
   const pieData = [
